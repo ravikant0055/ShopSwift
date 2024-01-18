@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Logo() {
+function Logo(link, className) {
   return (
     <div>Logo</div>
   )
