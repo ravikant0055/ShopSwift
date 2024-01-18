@@ -2,7 +2,9 @@ import React from 'react'
 
 function Logo(link, className) {
   return (
-    <div>Logo</div>
+    <div className='bg-cover bg-no-repeat'>
+        <img src='./loginImage.png' alt='logo' />
+    </div>
   )
 }
 

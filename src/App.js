@@ -1,9 +1,10 @@
 import './App.css';
+import Login from './pages/Login';
 
 function App() {
   return (
     <div className="App">
-      <span className='text-3xl'>Abhishek</span>
+      <Login />
     </div>
   );
 }
