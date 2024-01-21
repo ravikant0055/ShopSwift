@@ -9,19 +9,20 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 function App() {
   return (
-   <Router>
-    <div className="App">
-    <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/men' element={<Men/>} />
-        <Route path='/women' element={<Female/>}/>
-        <Route path='/kids' element={<Kids/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-      </Routes>
-    </div>
-   </Router> 
+  //  <Router>
+  //   <div className="App">
+  //   <Navbar/>
+  //     <Routes>
+  //       <Route path='/' element={<Home/>} />
+  //       <Route path='/men' element={<Men/>} />
+  //       <Route path='/women' element={<Female/>}/>
+  //       <Route path='/kids' element={<Kids/>}/>
+  //       <Route path='/login' element={<Login/>}/>
+  //       <Route path='/cart' element={<Cart/>}/>
+  //     </Routes>
+  //   </div>
+  //  </Router> 
+  <Login />
 
   );
 }
