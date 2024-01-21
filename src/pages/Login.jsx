@@ -4,7 +4,7 @@ import Input from '../components/common/Input'
 function Login() {
   return (
     <div>
-      <Input />
+      Login
     </div>
   )
 }
