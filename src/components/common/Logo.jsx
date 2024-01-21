@@ -1,9 +1,13 @@
 import React from 'react'
 
-function Logo(link, className) {
+function Logo({link, className}) {
+    console.log(link, className)
   return (
-    <div className='bg-cover bg-no-repeat'>
-        <img src='./loginImage.png' alt='logo' />
+    <div className='flex w-[100%] justify-center' >
+        <img src={link}
+        alt='logo'
+        className={className}
+        />
     </div>
   )
 }
