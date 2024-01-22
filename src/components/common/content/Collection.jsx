@@ -1,13 +1,14 @@
 import React from 'react'
+import "./Collection.css"
 
 export const Collection = () => {
   return (
-    <div className=' h-[440px] mb-10 sm:mb-20 md:mb-30 flex flex-col sm:flex-row justify-between items-center'>
-        <div  className='mb-4 sm:mb-0'>
-            <img className='max-w-full h-auto sm:max-h-[330px]'  src={process.env.PUBLIC_URL + '/images/men.png'} alt='men_image' />
+    <div className='collection_container'>
+        <div  className='collection_men'>
+            <img className='collection_men_img'  src={process.env.PUBLIC_URL + '/images/men.png'} alt='men_image' />
         </div>
-        <div>
-            <img className='max-w-full h-auto sm:max-h-[330px]' src={process.env.PUBLIC_URL + '/images/female.png'} alt="female image"/>
+        <div className='collection_women'>
+            <img className='collection_women_img' src={process.env.PUBLIC_URL + '/images/female.png'} alt="female image"/>
         </div>
     </div>
   )
