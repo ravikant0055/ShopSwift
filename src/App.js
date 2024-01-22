@@ -8,6 +8,8 @@ import Cart from './pages/Cart';
 import Navbar from './components/common/navbar/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
+import { Collection } from './components/common/content/Collection';
+import Header from './components/common/header/Header';
 function App() {
   return (
    <Router>
@@ -16,6 +18,7 @@ function App() {
       <Navbar />
       <Header />
       <Collection />
+      <Categories />
 
     </div>
    </Router> 
