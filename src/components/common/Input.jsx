@@ -6,7 +6,7 @@ const Input = React.forwardRef(function Input({
     type='text', 
     className="", 
     labelClassName="", 
-    name={name}, 
+    name, 
     id, 
     star,
     errors,
