@@ -1,10 +1,39 @@
 
-.container{
+.main_container{
     max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    /* margin: 20px; */
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
-.categories_container{
+
+.container_title{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_title h1{
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+
+.cat-img{
+    padding: 30px;
+}
+
+.cat-img h1{
+   font-size: 1.2rem;
+   margin-top: 10px;
+   font-weight: 500;
+   color: rgb(80, 80, 80);
+   text-align: center;
+   
+}
+
+.cat_img_main{
+    border-radius: 15px;
 }
