@@ -42,7 +42,7 @@ export const Categories = () => {
   return (
     <div className="container">
       <div className="container_title">
-        <h1>Categories</h1>
+        <h1>Categories here</h1>
       </div>
       <div className="categories_container">
         <Slider {...settings}>
