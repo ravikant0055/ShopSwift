@@ -10,15 +10,17 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import { Collection } from './components/common/content/Collection';
 import Header from './components/common/header/Header';
+import Footer from './components/common/footer/Footer';
 function App() {
   return (
    <Router>
     <div className="App">
       
-      <Navbar />
+      <Navbar /> 
       <Header />
       <Collection />
       <Categories />
+      <Footer />
 
     </div>
    </Router> 
