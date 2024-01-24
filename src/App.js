@@ -19,7 +19,7 @@ function App() {
       <Navbar /> 
       <Header />
       <Collection />
-      <Categories />
+      <Categories/>
       <Footer />
 
     </div>
