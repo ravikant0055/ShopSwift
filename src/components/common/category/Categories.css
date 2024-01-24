@@ -7,6 +7,7 @@
     /* margin: 20px; */
     margin-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .container_title{
@@ -37,3 +38,9 @@
 .cat_img_main{
     border-radius: 15px;
 }
+
+/* @media(max-width: 768){
+    .cat-img{
+        padding: 0;
+    }
+} */
