@@ -3,6 +3,7 @@ import React from 'react'
 const Input = React.forwardRef(function Input({
     icon,
     label,
+    placeholder,
     type='text', 
     className="", 
     labelClassName="", 
@@ -13,7 +14,6 @@ const Input = React.forwardRef(function Input({
     ...props
   },ref) 
   {
-    console.log(errors)
   return (
     <div className='w-full relative'>
       {label && <label 
@@ -25,13 +25,13 @@ const Input = React.forwardRef(function Input({
       <input 
       type={type}
       className={`${className} ${icon? 'pl-10': ''}`}
-      placeholder='' 
+      placeholder={`${placeholder}${star ? '*':''}`}
       ref={ref}
       id={id}
       name={name}
       {...props}
       />
-      {errors&&<span className='text-red-600 text-[12px] font-bold'>{errors.email?.message}</span>}
+      {errors!=false &&<span className='text-red-600 text-[12px] font-bold'>{errors}</span>}
       {icon && <span className='absolute top-0'>
         {icon}
       </span>}
