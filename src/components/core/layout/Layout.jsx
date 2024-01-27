@@ -5,7 +5,7 @@ function Layout({children}) {
   return (
     <div className='layout__wrapper'>
         <div className='layout__content'>
-          <div className='layout__sidebar'>
+          <div className='layout__sidebar  sticky top-0 z-50'>
             <Navbar />
           </div>
           <div className='layout__body'>

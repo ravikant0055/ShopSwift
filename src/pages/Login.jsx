@@ -22,7 +22,7 @@ function Login() {
 
   const logoLink = 'https://img.freepik.com/free-vector/woman-shopping-fashion-store-customer-with-bags-mannequin-accessory-flat-vector-illustration-consumerism-consumer-clothes-purchase-concept_74855-10194.jpg?w=1060&t=st=1705559541~exp=1705560141~hmac=4dcc038cf09e94f04dead5a7dfe1856471754e31007229ea6e1424449a491853';
   return (
-    <div className='flex justify-center h-screen items-center w-full px-14 mx-auto gap-28'>
+    <div className='flex justify-center h-screen items-center w-full px-14 h-auto mt-8 gap-28'>
       <div className='flex-[0.6] items-center justify-center flex-col hidden md:flex'>
         <Logo 
         link = {logoLink}
