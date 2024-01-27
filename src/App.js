@@ -1,10 +1,10 @@
 import './App.css';
-import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
   return (
     <div className="App">
-      <Login className='w-[50%]' />
+      <Signup className='w-[50%]' />
     </div>
   );
 }
