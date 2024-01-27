@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import { Collection } from './components/common/content/Collection';
 import Header from './components/common/header/Header';
 import Footer from './components/common/footer/Footer';
+import Trending from './components/common/trending/Trending';
 function App() {
   return (
    <Router>
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <Collection />
       <Categories/>
+      <Trending />
       <Footer />
 
     </div>
