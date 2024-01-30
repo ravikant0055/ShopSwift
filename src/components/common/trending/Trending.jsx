@@ -2,17 +2,19 @@ import React, { useState } from 'react'
 import "./Trending.css"
 import Slider from "react-slick";
 import TrendCard from "./TrendCard"
+import { Data } from './Data';
 
 const Trending  = () => {
 
     var settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,
-        autoplay: false,
+        autoplay: true,
+    autoplaySpeed: 2000,
         responsive: [
           {
             breakpoint: 1024,
@@ -54,63 +56,21 @@ const Trending  = () => {
     </div>
     <div className="trending_container">
       <Slider {...settings}>
-        
-         <TrendCard
-        imageSrc="/images/trend_image1.png"
-        title="MEN SWEATSHIRT"
-        subtitle="Together Fu-ever Sweatshirt"
-        price="₹1700"
-        discount="-33%"
+        { 
+          Data.map((data)=>(
+            data.trending &&
+            (<TrendCard
+        imageSrc={data.imageSrc}
+        title={data.title}
+        subtitle={data.subtitle}
+        price={data.price}
+        priceDis = {data.priceDis}
+        discount={data.discount}
+            
       />
-       <TrendCard
-        imageSrc="/images/trend_image2.png"
-        title="WOMEN SWEATSHIRT"
-        subtitle="Together Fu-ever Sweatshirt"
-        price="₹1700"
-        discount="-33%"
-      />
-        <TrendCard
-        imageSrc="/images/trend_image3.png"
-        title="WOMEN BOTTOMS"
-        subtitle="Together Fu-ever Sweatshirt"
-        price="₹1700"
-        discount="-33%"
-      />
-        <TrendCard
-        imageSrc="/images/trend_image4.png"
-        title="WOMEN SWEATSHIRT"
-        subtitle="Together Fu-ever Sweatshirt"
-        price="₹1700"
-        discount="-33%"
-      />
-        <TrendCard
-        imageSrc="/images/trend_image5.png"
-        title="WOMEN SWEATSHIRT"
-        subtitle="Together Fu-ever Sweatshirt"
-        price="₹1700"
-        discount="-33%"
-      />
-        <TrendCard
-        imageSrc="/images/trend_image6.png"
-        title="WOMEN SWEATSHIRT"
-        subtitle="Together Fu-ever Sweatshirt"
-        price="₹1700"
-        discount="-33%"
-      />
-        <TrendCard
-        imageSrc="/images/trend_image7.png"
-        title="WOMEN SWEATSHIRT"
-        subtitle="Together Fu-ever Sweatshirt"
-        price="₹1700"
-        discount="-33%"
-      />
-        <TrendCard
-        imageSrc="/images/trend_image8.png"
-        title="WOMEN SWEATSHIRT"
-        subtitle="Together Fu-ever Sweatshirt"
-        price="₹1700"
-        discount="-33%"
-      />
+            )
+          ))
+        }
       </Slider>
     </div>
   </div>
