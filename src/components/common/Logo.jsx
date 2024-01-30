@@ -1,8 +1,14 @@
 import React from 'react'
 
-function Logo() {
+function Logo({link, className}) {
+    console.log(link, className)
   return (
-    <div>Logo</div>
+    <div className='flex w-[100%] justify-center' >
+        <img src={link}
+        alt='logo'
+        className={className}
+        />
+    </div>
   )
 }
 
