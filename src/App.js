@@ -17,6 +17,7 @@ function App() {
       <Header />
       <Collection />
       <Categories/>
+      <Trending />
       <Footer />
 
     </div>

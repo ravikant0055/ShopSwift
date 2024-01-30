@@ -73,10 +73,9 @@
 
 
   .trend-img button{
-        background-color: whitesmoke;
+        background-color: orange;
         border: 1px solid black;
         padding:3px 10px;
-        display: none;
         
   }
 
@@ -93,3 +92,12 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 100;
   } */
+
+
+  .option-popup{
+    position: absolute;
+    bottom: 70px;
+    background-color: orange;
+    height: 100px;
+    width: 250px;
+  }

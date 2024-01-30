@@ -1,0 +1,42 @@
+import React, { useState } from 'react';
+import "./Trending.css"
+
+const TrendCard = ({ imageSrc, title, subtitle, price, discount }) => {
+  const [isPopupVisible, setPopupVisibility] = useState(false);
+  const [isDivVisible, setDivVisibility] = useState(false);
+
+
+  const handleMouseEnter = () => {
+    setPopupVisibility(true);
+  };
+
+  const handleMouseLeave = () => {
+    setPopupVisibility(false);
+  };
+
+  const handleButtonClick = () => {
+    setDivVisibility(!isDivVisible);
+  };
+
+  return (
+    <div className="trend-img" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <img className={`trend_img_main ${isPopupVisible ? 'hovered' : ''}`} src={process.env.PUBLIC_URL + imageSrc} alt={title} />
+      <h1 className={isPopupVisible ? 'hovered' : ''}>{title}</h1>
+      <h4 className={isPopupVisible ? 'hovered' : ''}>{subtitle}</h4>
+      <h3 className={isPopupVisible ? 'hovered' : ''}>{price}</h3>
+      <h2 className={isPopupVisible ? 'hovered' : ''}>{discount}</h2>
+      {isPopupVisible && (
+        <>
+          {isDivVisible &&
+            <div className="option-popup">
+                 This is a small div
+            </div>
+          }
+          <button onClick={handleButtonClick}>Select Options</button>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default TrendCard;
