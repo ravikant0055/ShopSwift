@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./Trending.css"
 import Slider from "react-slick";
+import TrendCard from "./TrendCard"
 
 const Trending  = () => {
 
@@ -33,7 +34,7 @@ const Trending  = () => {
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 2,
               slidesToScroll: 1
             }
           }
@@ -53,70 +54,63 @@ const Trending  = () => {
     </div>
     <div className="trending_container">
       <Slider {...settings}>
-        <div className="trend-img"  onMouseEnter={() => setPopupVisibility(true)} onMouseLeave={() => setPopupVisibility(false)}>
-          <img className={`trend_img_main ${isPopupVisible ? 'hovered' : ''}`} src={process.env.PUBLIC_URL + '/images/trend_image1.png'} />
-          <h1 className={isPopupVisible ? 'hovered' : ''}>MEN SWEATSHIRT</h1>
-          <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image2.png'} />
-        <h1>WOMEN SWEATSHIRT</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image3.png'} />
-        <h1>WOMEN BOTTOMS</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image4.png'} />
-        <h1>MEN BOTTOMS</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image5.png'} />
-        <h1>WOMEN BASICS</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image6.png'} />
-        <h1>WOMEN OVERSIZED-SHIRT</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image7.png'} />
-        <h1>WOMEN T-SHIRT</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image8.png'} />
-        <h1>WOMEN PRINTED-TSHIRT</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
+        
+         <TrendCard
+        imageSrc="/images/trend_image1.png"
+        title="MEN SWEATSHIRT"
+        subtitle="Together Fu-ever Sweatshirt"
+        price="₹1700"
+        discount="-33%"
+      />
+       <TrendCard
+        imageSrc="/images/trend_image2.png"
+        title="WOMEN SWEATSHIRT"
+        subtitle="Together Fu-ever Sweatshirt"
+        price="₹1700"
+        discount="-33%"
+      />
+        <TrendCard
+        imageSrc="/images/trend_image3.png"
+        title="WOMEN BOTTOMS"
+        subtitle="Together Fu-ever Sweatshirt"
+        price="₹1700"
+        discount="-33%"
+      />
+        <TrendCard
+        imageSrc="/images/trend_image4.png"
+        title="WOMEN SWEATSHIRT"
+        subtitle="Together Fu-ever Sweatshirt"
+        price="₹1700"
+        discount="-33%"
+      />
+        <TrendCard
+        imageSrc="/images/trend_image5.png"
+        title="WOMEN SWEATSHIRT"
+        subtitle="Together Fu-ever Sweatshirt"
+        price="₹1700"
+        discount="-33%"
+      />
+        <TrendCard
+        imageSrc="/images/trend_image6.png"
+        title="WOMEN SWEATSHIRT"
+        subtitle="Together Fu-ever Sweatshirt"
+        price="₹1700"
+        discount="-33%"
+      />
+        <TrendCard
+        imageSrc="/images/trend_image7.png"
+        title="WOMEN SWEATSHIRT"
+        subtitle="Together Fu-ever Sweatshirt"
+        price="₹1700"
+        discount="-33%"
+      />
+        <TrendCard
+        imageSrc="/images/trend_image8.png"
+        title="WOMEN SWEATSHIRT"
+        subtitle="Together Fu-ever Sweatshirt"
+        price="₹1700"
+        discount="-33%"
+      />
       </Slider>
     </div>
   </div>
