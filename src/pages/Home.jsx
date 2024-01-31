@@ -6,17 +6,6 @@ const Home = () => {
   return (
     <div>
       <Header/>
-      <Header/>
-      <Header/>
-
-      <Header/>
-      <Header/>
-      <Header/>
-      <Header/>
-      <Header/>
-      <Header/>
-      <Header/>
-
       <Footer/>
     </div>
   )

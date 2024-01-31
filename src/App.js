@@ -5,8 +5,10 @@ import Female from './pages/Women';
 import Kids from './pages/Kids';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
+import Demo from './pages/Demo';
 import Navbar from './components/common/navbar/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ProductItems from './pages/ProductItems';
 function App() {
   return (
    <Router>
@@ -19,6 +21,8 @@ function App() {
         <Route path='/kids' element={<Kids/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/demo' element={<Demo/>}/>
+        <Route path='/productitems' element={<ProductItems/>}/>
       </Routes>
     </div>
    </Router> 
