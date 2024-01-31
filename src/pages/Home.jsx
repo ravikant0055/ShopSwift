@@ -2,22 +2,17 @@ import React from 'react'
 import { Collection } from '../components/common/content/Collection';
 import Header from '../components/common/header/Header';
 import { Categories } from '../components/common/category/Categories';
+import Footer from '../components/common/footer/Footer'
+import Trending from '../components/common/trending/Trending'
 
 const Home = () => {
   return (
     <div>
-<<<<<<< HEAD
       <Header/>
-<<<<<<< HEAD
-      <Collection/>
-=======
->>>>>>> Ravi
-      <Footer/>
-=======
-      <Header />
       <Collection/>
       <Categories />
->>>>>>> c6df8c26cf0cca50c1e9694d7ca3d3a15e505abd
+      <Trending/>
+      <Footer/>
     </div>
   )
 }

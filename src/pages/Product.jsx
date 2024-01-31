@@ -8,8 +8,8 @@ const Product = ({item}) => {
           {item.map((Val) => {
             return (
               <div className="col-md-4 col-sm-6 card my-3 py-3 border-0" key={Val.id} >
-                <div className="card-img-top text-center">
-                  <img src={Val.img} alt={Val.title} className="photo w-75" />
+                <div className="card-img-top text-center w-[200px]">
+                  <img src={Val.imageSrc} alt={Val.title} className="photo w-75" />
                 </div>
 
                 <div className="card-body">
