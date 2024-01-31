@@ -7,7 +7,10 @@ const Home = () => {
   return (
     <div>
       <Header/>
+<<<<<<< HEAD
       <Collection/>
+=======
+>>>>>>> Ravi
       <Footer/>
     </div>
   )
