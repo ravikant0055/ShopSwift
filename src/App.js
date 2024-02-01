@@ -1,4 +1,7 @@
 import './App.css';
+import ProductDetails from './pages/ProductDetails';
+import Signup from './pages/Signup';
+
 import Home from './pages/Home';
 import Men from './pages/Men';
 import Female from './pages/Women';
@@ -23,6 +26,8 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/demo' element={<Demo/>}/>
         <Route path='/productitems' element={<ProductItems/>}/>
+        <Route path='/productdetails' element={<ProductDetails />}/>
+
       </Routes>
     </div>
    </Router> 

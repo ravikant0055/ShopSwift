@@ -7,7 +7,7 @@ import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { DevTool } from '@hookform/devtools';
 
-function Login() {
+function Signup() {
   
   // form related data
   const form = useForm();
@@ -21,16 +21,19 @@ function Login() {
 
   // end
 
-  const logoLink = 'https://img.freepik.com/free-vector/woman-shopping-fashion-store-customer-with-bags-mannequin-accessory-flat-vector-illustration-consumerism-consumer-clothes-purchase-concept_74855-10194.jpg?w=1060&t=st=1705559541~exp=1705560141~hmac=4dcc038cf09e94f04dead5a7dfe1856471754e31007229ea6e1424449a491853';
+  const logoLink = 'https://img.freepik.com/free-vector/people-choosing-products-grocery-store-trolley-vegetables-basket-flat-vector-illustration-shopping-supermarket-concept_74855-10122.jpg?w=1060&t=st=1706335138~exp=1706335738~hmac=fb168c5264e9efbe42b9b253988f909e4a153b47be578a36788981f68fa5650e';
   return (
-    <div className=' flex justify-center items-center h-auto
+    <div className=' flex h-screen justify-center border items-center flex-row-reverse
         lg:gap-9 lg:px-20
     '>
       <div className='hidden 
       
       lg:block lg:flex lg:flex-col lg:w-2/3 lg:justify-center lg:items-center'>
         <Logo link={logoLink} className='' />
-        <span>Create an account?</span>
+        <span>
+            Already have an account? 
+            <span className='ml-2 font-bold cursor-pointer'>Login</span>
+        </span>
       </div>
       <div className='
           flex flex-col justify-center shadow-xl h-auto py-7 border items-center w-[75%] max-w-[26rem] px-6 rounded-3xl
@@ -41,22 +44,23 @@ function Login() {
         <span className='
           text-3xl sm:text-4xl mb-8 font-bold
           md:text-5xl
-        '>Login</span>
+        '>Signup</span>
         <form className='w-[100%] flex flex-col' onSubmit={handleSubmit(onSubmit)}>
         <Input
            placeholder='Email or Username' 
-           className='outline-none w-[100%] h-11 px-[1px] font-medium border-b border-black mb-[15px] 
-           md:h-12 md:text-xl
+           className='outline-none w-[100%] h-11 px-[1px] font-[600] border-b border-black mb-[15px] 
+           md:text-[16px]
            ' 
            id='email'
            star={true}
            errors={errors?.email && errors.email.message}
            {...register('email', {required: 'Email is required.', pattern:{}})} 
           />
+
           <Input 
             placeholder='Password' 
-            className='outline-none w-[100%] h-11 px-[1px] font-medium border-b border-black
-            md:h-12 md:text-xl
+            className='outline-none w-[100%] h-11 px-[1px] font-[600] border-b border-black mb-[15px]
+            md:text-[16px]
             ' 
             id='password'
             star={true}
@@ -64,13 +68,20 @@ function Login() {
             {...register('password', {required:'Password is required.'})}
           />
           
-          <span className=' text-[13px] ml-auto my-[20px] 
-            md:text-[15px]
-          '>Forget Password?</span>
+          <Input 
+            placeholder='Confirm Password' 
+            className='outline-none w-[100%] h-11 px-[1px] font-[600] border-b border-black 
+            md:text-[16px]
+            ' 
+            id='confirm_password'
+            star={true}
+            errors={errors?.password && errors.password.message}
+            {...register('confirm_password', {required:'Password is required.'})}
+          />
           
-          <button className='border px-8 h-9 text-center rounded-xl bg-gradient-to-r border-none from-cyan-500 to-white w-2/5
-            md:text-lg md:font-medium
-          '>Login</button>
+          <button className='border px-5 mt-9 h-9 text-center rounded-xl bg-gradient-to-r border from-cyan-500 to-white w-2/5
+            md:text-[17px] md:font-[500]
+          '>Signup</button>
         
         </form>
         <div className='flex mt-8 items-center h-auto '>
@@ -78,9 +89,9 @@ function Login() {
           md:text-[15px]
           '>Or login with:</span>
           <div className='flex gap-5 items-center'>
-            <FcGoogle className='text-3xl sm:text-[40px]' />
-            <FaFacebook className='text-blue-600 text-3xl sm:text-[40px]' />
-            <AiFillTwitterCircle className='text-blue-500 text-3xl sm:text-[44px]' />
+            <FcGoogle className='text-3xl sm:text-[40px] cursor-pointer' />
+            <FaFacebook className='text-blue-600 text-3xl sm:text-[40px] cursor-pointer' />
+            <AiFillTwitterCircle className='text-blue-500 text-3xl sm:text-[44px] cursor-pointer' />
           </div>
         </div>
       </div>
@@ -89,4 +100,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Signup

@@ -33,9 +33,6 @@ const ProductDetail = () => {
       </div>
       </div>
       
-      <div className='product-detailDiv'>
-
-      </div>
     </div>
   )
 }
