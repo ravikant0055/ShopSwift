@@ -1,7 +1,5 @@
 import './App.css';
-import ProductDetails from './pages/ProductDetails';
-import Signup from './pages/Signup';
-
+import ProductDetails from './components/common/ProductDetails/ProductDetail';
 import Home from './pages/Home';
 import Men from './pages/Men';
 import Female from './pages/Women';
@@ -12,6 +10,7 @@ import Navbar from './components/common/navbar/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import ProductItems from './pages/ProductItems';
+import Signup from './pages/Signup';
 function App() {
   return (
    <Router>
@@ -27,6 +26,7 @@ function App() {
         <Route path='/demo' element={<Demo/>}/>
         <Route path='/productitems' element={<ProductItems/>}/>
         <Route path='/productdetails' element={<ProductDetails />}/>
+        <Route path='/signup' element={<Signup />}/>
 
       </Routes>
     </div>

@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { DevTool } from '@hookform/devtools';
+import { Link } from 'react-router-dom';
 
 function Signup() {
   
@@ -23,7 +24,7 @@ function Signup() {
 
   const logoLink = 'https://img.freepik.com/free-vector/people-choosing-products-grocery-store-trolley-vegetables-basket-flat-vector-illustration-shopping-supermarket-concept_74855-10122.jpg?w=1060&t=st=1706335138~exp=1706335738~hmac=fb168c5264e9efbe42b9b253988f909e4a153b47be578a36788981f68fa5650e';
   return (
-    <div className=' flex h-screen justify-center border items-center flex-row-reverse
+    <div className=' flex h-auto justify-center items-center flex-row-reverse
         lg:gap-9 lg:px-20
     '>
       <div className='hidden 
