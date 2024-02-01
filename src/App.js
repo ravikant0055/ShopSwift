@@ -1,10 +1,11 @@
 import './App.css';
+import ProductDetails from './pages/ProductDetails';
 import Signup from './pages/Signup';
 
 function App() {
   return (
     <div className="App">
-      <Signup className='w-[50%]' />
+      <ProductDetails />
     </div>
   );
 }
