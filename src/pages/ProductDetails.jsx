@@ -4,10 +4,10 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
-import ProductForm from "../components/common/ProductForm";
 import { useSelector, useDispatch } from "react-redux";
 import { setProductDetails } from "../redux/slice/ProductDetailsSlice";
 import Expandables from "../components/common/productDetails/Expandables";
+import CardForm from "../components/common/productDetails/CardForm";
 
 function ProductDetails({ images, type }) {
   let data;
@@ -32,7 +32,7 @@ function ProductDetails({ images, type }) {
       {/* give padding for full website */}
       <div className="productDetails_summary 
         lg:flex lg:gap-14">
-        <div className="productDetails_slick mb-6 lg:flex-1">
+        <div className="productDetails_slick mb-6 lg:flex-5">
             <img 
                 src='https://assets.bonkerscorner.com/uploads/2024/01/23172054/disney-shere-oversized-tshirt-2.jpg' 
                 alt='product_img' 
@@ -40,7 +40,7 @@ function ProductDetails({ images, type }) {
             />
         </div>
 
-        <div className="productDetails_productSummary lg:flex-1">
+        <div className="productDetails_productSummary lg:flex-4">
           <div className="">
             <span className="text-[13px] font-[600] text-gray-500 md:text-[15px]">
               MEN & <span className="font-[600] md:text-[15px]">Oversized T-Shirt</span>
@@ -71,7 +71,7 @@ function ProductDetails({ images, type }) {
             </del>
 
             <span
-              className="text-white bg-red-600 ml-3 text-[14px] px-[15px] py-[8px] font-[700]
+              className="text-white bg-red-600 ml-3 text-[14px] px-[15px] py-[8px] font-[700] rounded-md
                     md:text-[16px]
                     
                     "
@@ -80,8 +80,8 @@ function ProductDetails({ images, type }) {
             </span>
           </div>
 
-          <div>
-            <ProductForm />
+          <div className="">
+            <CardForm />
           </div>
 
           <div className="my-2">
