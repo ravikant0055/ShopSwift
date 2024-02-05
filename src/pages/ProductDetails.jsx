@@ -27,20 +27,26 @@ function ProductDetails({ images, type }) {
 
   data = useSelector((state) => state.productDetails);
   const { product_id, ...dataToSend } = data.details;
+  console.log(product_id);
 
   return (
     <div className="productDetails_wrapper p-4 w-auto lg:p-14">
       {/* give padding for full website */}
-      <div className="productDetails_summary 
-        lg:flex lg:gap-14">
-        <div className="productDetails_slick mb-6 lg:w-2/3"> 
-            <ProductDetail />
+      <div
+        className="productDetails_summary 
+        lg:flex lg:gap-14"
+      >
+        <div className="productDetails_slick mb-6 lg:w-2/3">
+          <ProductDetail />
         </div>
 
         <div className="productDetails_productSummary lg:w-1/3">
           <div className="">
             <span className="text-[13px] font-[600] text-gray-500 md:text-[15px]">
-              MEN & <span className="font-[600] md:text-[15px]">Oversized T-Shirt</span>
+              MEN &{" "}
+              <span className="font-[600] md:text-[15px]">
+                Oversized T-Shirt
+              </span>
             </span>
             <h1
               className="text-[30px] my-2
@@ -59,13 +65,7 @@ function ProductDetails({ images, type }) {
               ₹{(1599 * 40) / 100}{" "}
             </span>
 
-            <del
-              className="mx-3 text-[18px]
-                    md:text-[22px]
-                    "
-            >
-              ₹1,599.00{" "}
-            </del>
+            <del className="mx-3 text-[18px]">₹1,599.00 </del>
 
             <span
               className="text-white bg-red-600 ml-3 text-[14px] px-[15px] py-[8px] font-[700] rounded-md
@@ -78,7 +78,7 @@ function ProductDetails({ images, type }) {
           </div>
 
           <div className="">
-            <CardForm />
+            <CardForm product_id={product_id} />
           </div>
 
           <div className="my-2">
@@ -99,11 +99,11 @@ function ProductDetails({ images, type }) {
             >
               Share :
             </h5>
-            <FaTwitter className="text-gray-400 md:text-lg" />
-            <FaFacebookF className="text-gray-400 md:text-lg" />
-            <FaLinkedinIn className="text-gray-400 md:text-lg" />
-            <FaPinterestP className="text-gray-400 md:text-lg" />
-            <IoMailOutline className="text-gray-400 md:text-lg" />
+            <FaTwitter className="text-gray-400 md:text-lg hover:text-blue-500 cursor-pointer" />
+            <FaFacebookF className="text-gray-400 md:text-lg hover:text-blue-500 cursor-pointer" />
+            <FaLinkedinIn className="text-gray-400 md:text-lg cursor-pointer" />
+            <FaPinterestP className="text-gray-400 md:text-lg cursor-pointer" />
+            <IoMailOutline className="text-gray-400 md:text-lg cursor-pointer" />
           </div>
           <div className="productDetails_description">
             <div>
