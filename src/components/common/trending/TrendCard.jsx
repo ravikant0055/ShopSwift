@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Trending.css"
+import CardForm from '../productDetails/CardForm';
 
 const TrendCard = ({ imageSrc, title, subtitle, price, discount ,priceDis}) => {
   const [isPopupVisible, setPopupVisibility] = useState(false);
@@ -32,7 +33,7 @@ const TrendCard = ({ imageSrc, title, subtitle, price, discount ,priceDis}) => {
         <>
           {isDivVisible &&
             <div className="option-popup">
-                 This is a small div
+                 <CardForm />
             </div>
           }
           <button onClick={handleButtonClick}>Select Options</button>

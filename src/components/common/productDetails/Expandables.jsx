@@ -12,17 +12,19 @@ function Expandables({ data }) {
     setShowStates(newShowStates);
   };
   return (
-    <div className="flex flex-col border-b border-gray-400">
+    <div className="flex flex-col border-b border-gray-300">
       {data.map(([key, value], index) => (
         <div
-          className="border-t border-gray-400 py-5 px-2
+          className="border-t border-gray-300 py-4 px-2 cursor-pointer 
                 md:py-5
                 "
+          onClick={() => handleToggle(index)}
+
           key={index}
         >
           <div className="flex items-center justify-between ">
             <strong
-              className="font-[500] text-lg
+              className="font-[500] text-sm
                         "
             >
               {(key.charAt(0).toUpperCase() + key.slice(1))
@@ -31,10 +33,9 @@ function Expandables({ data }) {
             </strong>
             <div
               className="cursor-pointer p-1 "
-              onClick={() => handleToggle(index)}
               style={{ transform: `rotate(${showStates[index] ? 0 : 180}deg)`, transition: 'all 0.25s' }}
             >
-                <IoIosArrowUp className="cursor-pointer text-[20px] " />
+                <IoIosArrowUp className="cursor-pointer text-base " />
             </div>
           </div>
 
@@ -44,8 +45,7 @@ function Expandables({ data }) {
                 {value.map((item, index) => (
                   <li
                     key={index}
-                    className="text-base font-[300] mt-2 text-gray-700
-                            md:text-[16px]
+                    className="text-sm font-[400] mt-4
                         "
                   >
                     {item}
@@ -53,7 +53,7 @@ function Expandables({ data }) {
                 ))}
               </ul>
             ) : (
-              <p key={index} className="text-base font-[300] mt-4 text-gray-700 md:text-[16px]">
+              <p key={index} className="text-sm font-[400] mt-4  px-3">
                 {value}
               </p>
             ))}

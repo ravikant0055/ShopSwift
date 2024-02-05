@@ -1,5 +1,5 @@
 import './App.css';
-import ProductDetails from './components/common/ProductDetails/ProductDetail';
+import ProductDetail from './components/common/productDetails/ProductDetail';
 import Home from './pages/Home';
 import Men from './pages/Men';
 import Female from './pages/Women';
@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import ProductItems from './pages/ProductItems';
 import Signup from './pages/Signup';
+import ProductDetails from './pages/ProductDetails';
 function App() {
   return (
    <Router>
