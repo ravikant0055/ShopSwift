@@ -17,10 +17,10 @@ function App() {
       <Navbar /> 
       {/* <Header />
       <Collection />
-      <Categories/>
-      <Trending /> */}
-      {/* <Footer /> */}
-      <ProductDetail />
+  <Categories/>*/}
+      <Trending /> 
+      <Footer /> 
+      {/* <ProductDetail /> */}
 
     </div>
    </Router> 
