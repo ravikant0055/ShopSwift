@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
-import { IoIosArrowDown } from "react-icons/io";
 
 function Expandables({ data }) {
   const [showStates, setShowStates] = useState(

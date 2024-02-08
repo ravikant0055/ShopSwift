@@ -4,6 +4,8 @@ const initialState = {
   loading: false,
   user:'',
 //   user:localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')):null ,
+  wishlist:[1],
+  cart:[],
   token:localStorage.getItem('token') || null
 }
 
@@ -24,10 +26,16 @@ export const authSlice = createSlice({
     setToken: (state, action) => {
       state.token = action.payload
     },
+    setCart:(state, action) => {
+      state.cart = action.payload
+    },
+    setWishlist:(state, action) => {
+      state.wishlist = action.payload
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setLoading, setToken, setUser } = authSlice.actions
+export const { setLoading, setToken, setUser, setCart, setWishlist } = authSlice.actions
 
 export default authSlice.reducer

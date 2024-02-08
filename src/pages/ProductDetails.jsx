@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -8,10 +8,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { setProductDetails } from "../redux/slice/ProductDetailsSlice";
 import Expandables from "../components/common/productDetails/Expandables";
 import CardForm from "../components/common/productDetails/CardForm";
+import StickyBottomDiv from "../components/common/StickyFooter";
 
 function ProductDetails({ images, type }) {
   let data;
   const dispatch = useDispatch();
+  const divRef = useRef(null);
+  data = useSelector((state) => state.productDetails);
+  const { product_id, ...dataToSend } = data.details;
   function call() {
     dispatch(
       setProductDetails({
@@ -24,8 +28,7 @@ function ProductDetails({ images, type }) {
     );
   }
 
-  data = useSelector((state) => state.productDetails);
-  const { product_id, ...dataToSend } = data.details;
+  
   console.log(product_id);
 
   return (
@@ -36,7 +39,10 @@ function ProductDetails({ images, type }) {
         lg:flex lg:gap-14"
       >
         <div className="productDetails_slick mb-6 lg:w-2/3">
-          <img />
+          <img alt="img" src='https://assets.bonkerscorner.com/uploads/2024/01/23172054/disney-shere-oversized-tshirt-2.jpg' />
+          <img alt="img" src='https://assets.bonkerscorner.com/uploads/2024/01/23172054/disney-shere-oversized-tshirt-2.jpg' />
+          <img alt="img" src='https://assets.bonkerscorner.com/uploads/2024/01/23172054/disney-shere-oversized-tshirt-2.jpg' />
+
         </div>
 
         <div className="productDetails_productSummary lg:w-1/3">
@@ -46,6 +52,7 @@ function ProductDetails({ images, type }) {
               <span className="font-[600] md:text-[15px]">
                 Oversized T-Shirt
               </span>
+
             </span>
             <h1
               className="text-[30px] my-2
@@ -67,18 +74,17 @@ function ProductDetails({ images, type }) {
             <del className="mx-3 text-[18px]">₹1,599.00 </del>
 
             <span
-              className="text-white bg-red-600 ml-3 text-[14px] px-[15px] py-[8px] font-[700] rounded-md
-                    md:text-[16px]
-                    
-                    "
+              className="text-white bg-red-600 ml-3 text-[14px] px-[15px] py-[8px] font-[700] rounded-md"
             >
               -27% OFF
             </span>
           </div>
 
-          <div className="">
+          <div className="" ref={divRef}>
+            {console.log(divRef)}
             <CardForm product_id={product_id} />
           </div>
+          <StickyBottomDiv ref={divRef} />
 
           <div className="my-2">
             <span
