@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -9,10 +9,14 @@ import { setProductDetails } from "../redux/slice/ProductDetailsSlice";
 import Expandables from "../components/common/productDetails/Expandables";
 import CardForm from "../components/common/productDetails/CardForm";
 import ProductDetail from "../components/common/productDetails/ProductDetail";
+import StickyBottomDiv from "../components/common/StickyFooter";
 
 function ProductDetails({ images, type }) {
   let data;
   const dispatch = useDispatch();
+  const divRef = useRef(null);
+  data = useSelector((state) => state.productDetails);
+  const { product_id, ...dataToSend } = data.details;
   function call() {
     dispatch(
       setProductDetails({
@@ -25,9 +29,6 @@ function ProductDetails({ images, type }) {
     );
   }
 
-  data = useSelector((state) => state.productDetails);
-  const { product_id, ...dataToSend } = data.details;
-  console.log(product_id);
 
   return (
     <div className="productDetails_wrapper p-4 w-auto lg:p-14">
@@ -68,18 +69,17 @@ function ProductDetails({ images, type }) {
             <del className="mx-3 text-[18px]">₹1,599.00 </del>
 
             <span
-              className="text-white bg-red-600 ml-3 text-[14px] px-[15px] py-[8px] font-[700] rounded-md
-                    md:text-[16px]
-                    
-                    "
+              className="text-white bg-red-600 ml-3 text-[14px] px-[15px] py-[8px] font-[700] rounded-md"
             >
               -27% OFF
             </span>
           </div>
 
-          <div className="">
+          <div className="" ref={divRef}>
+            {console.log(divRef)}
             <CardForm product_id={product_id} />
           </div>
+          <StickyBottomDiv ref={divRef} />
 
           <div className="my-2">
             <span

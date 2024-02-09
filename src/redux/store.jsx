@@ -4,6 +4,6 @@ import productDetailsReducer from './slice/ProductDetailsSlice'
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    productDetails: productDetailsReducer
+    productDetails: productDetailsReducer,
   },
 })

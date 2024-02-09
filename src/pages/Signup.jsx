@@ -1,12 +1,11 @@
 import React from 'react'
-import { Form, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import Input from '../components/common/Input'
 import Logo from '../components/common/Logo'
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { DevTool } from '@hookform/devtools';
-import { Link } from 'react-router-dom';
 
 function Signup() {
   

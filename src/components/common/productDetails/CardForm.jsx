@@ -8,7 +8,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { setWishlist } from "../../../redux/slice/authSlice";
 
-function CardForm({ product_id }) {
+function CardForm({ product_id, full = true   }) {
   const [selectedSize, setSelectedSize] = useState(null);
   const form = useForm();
   const { register, control, handleSubmit, formState, setValue, getValues } =
@@ -31,12 +31,13 @@ function CardForm({ product_id }) {
       )
     );
   };
+  
   return (
     <div className="cardForm_wrapper">
       <div className="cardForm_form">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex items-center mb-2">
-            <div className="py-2">
+            <div className="">
               <span className="text-[12px] font-semibold">SIZE</span>
               <div className="relative">
                 <div className="flex items-center space-x-2 pt-2 pb-6">
@@ -68,10 +69,10 @@ function CardForm({ product_id }) {
                         <button className=''>Size Chart</button>
                     </div> */}
           <div className="">
-            <div className="flex gap-5 items-center mb-7">
-              <div className="border border-gray-300 flex items-center justify-center h-11 w-full rounded-md border-2 hover:border-black">
+            <div className="flex gap-5 items-center mb-5">
+              <div className="border border-gray-300 flex justify-center h-11 w-full rounded-md border-2 hover:border-black">
                 <button
-                  className="w-full flex justify-center"
+                  className="w-full h-full flex justify-center items-center"
                   onClick={() => {
                     setValue("quantity", parseInt(getValues("quantity")) - 1);
                   }}
@@ -87,7 +88,7 @@ function CardForm({ product_id }) {
                   {...register("quantity")}
                 />
                 <button
-                  className="w-full flex justify-center "
+                  className="w-full flex justify-center h-full items-center"
                   onClick={() => {
                     setValue("quantity", parseInt(getValues("quantity")) + 1);
                   }}
@@ -119,17 +120,18 @@ function CardForm({ product_id }) {
             </div>
             <div>
               <button
-                className="border w-full text-sm border border-gray-300 font-semibold py-[13px] text-center mr-4 rounded-md mb-7 border-2 hover:border-black"
+                className={`border w-full text-sm border border-gray-300 font-semibold py-[13px] text-center mr-4 rounded-md mb-7 border-2 hover:border-black ${!selectedSize && '!text-gray-400'} ${!full && 'bg-black text-white'}`}
                 type="submit"
+                disabled={!selectedSize}
               >
                 ADD TO CART
               </button>
-              <button
-                className="border w-full text-sm border border-gray-500 font-semibold py-[13px] text-center mr-4 rounded-md bg-black text-white "
+              {full && <button
+                className={`border w-full text-sm border border-gray-500 font-semibold py-[13px] text-center mr-4 rounded-md bg-black text-white ${!selectedSize && 'text-opacity-35'}`}
                 type="button"
               >
                 BUY IT NOW
-              </button>
+              </button>}
             </div>
           </div>
         </form>
