@@ -4,42 +4,31 @@ import Slider from "react-slick";
 import { Data } from "./Data";
 
 const ProductDetail = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  if (!isSmallScreen) {
-    return (
-      <div className="product-mainContainer">
-        <div className="product-imgDiv">
-          <div className="top-image">
-            <img
-              src={process.env.PUBLIC_URL + "/images/men.png"}
-              alt="Top Image"
-            />
-          </div>
-          <div className="image-grid">
-          {Data.map((data) => (
-            
-              <div className="grid-item">
-                <img
-                  src={process.env.PUBLIC_URL + data.imageSrc}
-                  alt="Image 1"
-                />
-              </div>
-            
-          ))}
-          </div>
+  return (
+    <div className='product-mainContainer'>
+      <div className='product-imgDiv'>
+        
+      <div className="top-image">
+        <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Top Image" />
+      </div>
+      <div className="image-grid">
+        <div className="grid-item">
+          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 1" />
+        </div>
+        <div className="grid-item">
+          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 2" />
+        </div>
+        <div className="grid-item">
+          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 2" />
+        </div>
+        <div className="grid-item">
+          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 2" />
+        </div>
+        <div className="grid-item">
+          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 2" />
+        </div>
+        <div className="grid-item">
+          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 2" />
         </div>
 
         <div className="product-detailDiv">
