@@ -9,6 +9,7 @@ const initialState = {
   fabric: [],
   care_instructions: []
   }
+  
 }
 
 export const productDetailsSlice = createSlice({
