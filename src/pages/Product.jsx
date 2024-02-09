@@ -1,32 +1,35 @@
-import React from 'react'
+import React from "react";
+import TrendCard from "../components/common/trending/TrendCard";
+import "../components/common/trending/Trending.css";
+import { useDispatch, useSelector } from "react-redux";
+import Data from "./Data";
 
-const Product = ({item}) => { 
+const Product = ({ item }) => {
+  
+  const {all_products} = useSelector((state)=> state.products);
+  const dispatch = useDispatch();
+
+
   return (
     <>
-      <div className="container-fluid">
-        <div className="grid">
-          {item.map((Val) => {
-            return (
-              <div className="col-md-4 col-sm-6 card my-3 py-3 border-0" key={Val.id} >
-                <div className="card-img-top text-center">
-                  <img src={Val.img} alt={Val.title} className="photo w-75" />
-                </div>
-
-                <div className="card-body">
-                  <div className="card-title fw-bold fs-4">
-                    {Val.title} &nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;
-                    {Val.price}
-                  </div>
-                  <div className="card-text">{Val.desc}</div>
-                </div>
-
-              </div>
-            );
-          })}
+      <div className="container mx-auto">
+        <div className="flex flex-wrap -mx-4">
+          {item.map((data,index) => (
+            <div key={index} className="w-1/2 md:w-1/4 md:px-4">
+              <TrendCard
+                imageSrc={data.imageSrc}
+                title={data.title}
+                subtitle={data.subtitle}
+                price={data.price}
+                priceDis={data.priceDis}
+                discount={data.discount}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Product;

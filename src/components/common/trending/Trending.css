@@ -1,88 +1,76 @@
-.main_trending_container{
-    max-width: 100%;
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    /* margin: 20px; */
-    margin-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+.main_trending_container {
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  /* margin: 20px; */
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.trending_title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.trending_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.trending_title h1{
-    font-weight: bold;
-    font-size: 1.9rem;
+.trending_title h1 {
+  font-weight: bold;
+  font-size: 1.9rem;
 }
 
-
-.trend-img{
-    padding: 30px;
-    position: relative;
-
+.trend-img {
+  padding: 30px;
+  position: relative;
 }
 
-.trend-img h1{
-    margin-left: 7px;
-   font-size: 11px;
-   margin-top: 8px;
-   font-weight: 400;
-   color: rgb(199, 199, 199);
-   /* text-align: center; */
-   
+.trend-img h1 {
+  margin-left: 7px;
+  font-size: 11px;
+  margin-top: 8px;
+  font-weight: 400;
+  color: rgb(199, 199, 199);
+  /* text-align: center; */
 }
 
-
-
-.trend-img h4{
-    margin-left: 7px;
+.trend-img h4 {
+  margin-left: 7px;
 }
 
-.trend-img h3{
-    margin-left: 7px;
+.trend-img h3 {
+  margin-left: 7px;
 }
 
-.trend-img h2{
-    margin: 15px;
-    width: 42px;
-    padding-left: 3px;
-    padding-right: 4px;
-    background-color: red;
-    color: white;
+.trend-img h2 {
+  margin: 15px;
+  width: 42px;
+  padding-left: 3px;
+  padding-right: 4px;
+  background-color: red;
+  color: white;
 }
 
-.trend_img_main{
-    border-radius: 15px;
+.trend_img_main {
+  border-radius: 15px;
 }
 
+.trend-img img.hovered,
+.trend-img h1.hovered,
+.trend-img h4.hovered,
+.trend-img h3.hovered,
+.trend-img h2.hovered {
+  transform: translateY(-30px);
+  transition: transform 0.3s ease;
+}
 
+.trend-img button {
+  background-color: orange;
+  border: 1px solid black;
+  padding: 3px 10px;
+}
 
-  .trend-img img.hovered,
-  .trend-img h1.hovered,
-  .trend-img h4.hovered,
-  .trend-img h3.hovered,
-  .trend-img h2.hovered {
-    transform: translateY(-30px);
-    transition: transform 0.3s ease;
-  }
-
-
-  .trend-img button{
-        background-color: whitesmoke;
-        border: 1px solid black;
-        padding:3px 10px;
-        display: none;
-        
-  }
-
-
-  
-  /* .popup {
+/* .popup {
     position: absolute;
     top: 100%;
     left: 0;
@@ -93,3 +81,16 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 100;
   } */
+
+.option-popup {
+  position: absolute;
+  bottom: 70px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(126, 32, 32, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 200px;
+  width: 420px;
+}

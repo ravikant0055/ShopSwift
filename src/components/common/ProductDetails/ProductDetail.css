@@ -1,0 +1,27 @@
+.product-mainContainer{
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* gap: 10px; */
+    /* margin : 20px 120px; */
+}
+
+/* .product-imgDiv{
+    flex: 0.5;
+    border: 1px solid red;
+} */
+
+/* .product-detailDiv{
+    flex: 0.5;
+    border: 1px solid green;
+} */
+
+.top-image {
+    margin-bottom: 10px; 
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+
+  }

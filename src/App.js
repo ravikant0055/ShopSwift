@@ -9,6 +9,7 @@ import Navbar from './components/common/navbar/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import ProductItems from './pages/ProductItems';
+
 function App() {
   return (
    <Router>
@@ -23,11 +24,11 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/demo' element={<Demo/>}/>
         <Route path='/productitems' element={<ProductItems/>}/>
+
       </Routes>
     </div>
    </Router> 
 
   );
 }
-
 export default App;

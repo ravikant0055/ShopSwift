@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
 import "./Trending.css"
 import Slider from "react-slick";
+import TrendCard from "./TrendCard"
+import { Data } from './Data';
 
 const Trending  = () => {
 
     var settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,
-        autoplay: false,
+        autoplay: true,
+    autoplaySpeed: 2000,
         responsive: [
           {
             breakpoint: 1024,
@@ -33,7 +36,7 @@ const Trending  = () => {
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 2,
               slidesToScroll: 1
             }
           }
@@ -53,70 +56,21 @@ const Trending  = () => {
     </div>
     <div className="trending_container">
       <Slider {...settings}>
-        <div className="trend-img"  onMouseEnter={() => setPopupVisibility(true)} onMouseLeave={() => setPopupVisibility(false)}>
-          <img className={`trend_img_main ${isPopupVisible ? 'hovered' : ''}`} src={process.env.PUBLIC_URL + '/images/trend_image1.png'} />
-          <h1 className={isPopupVisible ? 'hovered' : ''}>MEN SWEATSHIRT</h1>
-          <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image2.png'} />
-        <h1>WOMEN SWEATSHIRT</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image3.png'} />
-        <h1>WOMEN BOTTOMS</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image4.png'} />
-        <h1>MEN BOTTOMS</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image5.png'} />
-        <h1>WOMEN BASICS</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image6.png'} />
-        <h1>WOMEN OVERSIZED-SHIRT</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image7.png'} />
-        <h1>WOMEN T-SHIRT</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
-        <div className="trend-img">
-        <img className="trend_img_main" src={process.env.PUBLIC_URL + '/images/trend_image8.png'} />
-        <h1>WOMEN PRINTED-TSHIRT</h1>
-        <h4 className={isPopupVisible ? 'hovered' : ''}>Together Fu-ever Sweetshirt</h4>
-          <h3 className={isPopupVisible ? 'hovered' : ''}>₹1700</h3>
-          <h2 className={isPopupVisible ? 'hovered' : ''}>-33%</h2>
-          <button onClick={handleButtonClick}>Select Options</button>
-        </div>
+        { 
+          Data.map((data)=>(
+            data.trending &&
+            (<TrendCard
+        imageSrc={data.imageSrc}
+        title={data.title}
+        subtitle={data.subtitle}
+        price={data.price}
+        priceDis = {data.priceDis}
+        discount={data.discount}
+            
+      />
+            )
+          ))
+        }
       </Slider>
     </div>
   </div>
