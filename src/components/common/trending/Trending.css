@@ -22,7 +22,7 @@
 
 .trend-img {
   padding: 30px;
-  position: relative;
+  /* position: relative; */
 }
 
 .trend-img h1 {
@@ -83,7 +83,7 @@
   } */
 
 .option-popup {
-  position: absolute;
+  position: fixed;
   bottom: 100px;
   background-color: white; 
   /* background: rgba(255, 255, 255, 0.14); */
@@ -94,7 +94,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   height: auto;
   width: 320px;
-  padding:15px 20px 20px 20px;
+  padding:10px 20px 20px 20px;
   z-index: 99;
 
 }

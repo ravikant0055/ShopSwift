@@ -7,7 +7,7 @@ const ProductDetail = () => {
       <div className='product-imgDiv'>
         
       <div className="top-image">
-        <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Top Image" />
+        <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Top Image" className='w-full' />
       </div>
       <div className="image-grid">
         <div className="grid-item">
@@ -17,10 +17,10 @@ const ProductDetail = () => {
           <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 2" />
         </div>
         <div className="grid-item">
-          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 2" />
+          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 3" />
         </div>
         <div className="grid-item">
-          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 2" />
+          <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 4" />
         </div>
         <div className="grid-item">
           <img src={process.env.PUBLIC_URL + '/images/men.png'} alt="Image 2" />

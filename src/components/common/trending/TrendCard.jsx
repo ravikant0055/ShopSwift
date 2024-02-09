@@ -19,8 +19,8 @@ const TrendCard = ({ imageSrc, title, subtitle, price, discount ,priceDis}) => {
     setDivVisibility(!isDivVisible);
   };
 
-  isDivVisible ? document.body.style.overflowY = 'hidden' : (document.body.style.overflow = 'auto') ;
-
+  // isDivVisible ? document.body.style.overflowY = 'hidden' : (document.body.style.overflow = 'auto') ;
+  // isDivVisible ? document.body.classList.add('active-model'):  document.body.classList.remove('active-model')
 
   return (
     <div className="trend-img" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -36,7 +36,7 @@ const TrendCard = ({ imageSrc, title, subtitle, price, discount ,priceDis}) => {
       
         
           {isDivVisible &&
-            <PopupForm hideDiv={setDivVisibility} />
+            <PopupForm hideDiv={setDivVisibility}  />
           }
         
       
