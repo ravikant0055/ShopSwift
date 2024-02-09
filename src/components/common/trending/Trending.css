@@ -64,11 +64,11 @@
   transition: transform 0.3s ease;
 }
 
-.trend-img button {
+/* .trend-img button {
   background-color: orange;
   border: 1px solid black;
   padding: 3px 10px;
-}
+} */
 
 /* .popup {
     position: absolute;
@@ -84,13 +84,21 @@
 
 .option-popup {
   position: absolute;
-  bottom: 70px;
-  background: rgba(255, 255, 255, 0.14);
+  bottom: 100px;
+  background-color: white; 
+  /* background: rgba(255, 255, 255, 0.14); */
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(126, 32, 32, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(41, 43, 165, 0.2);
+  /* backdrop-filter: blur(12px); */
+  /* -webkit-backdrop-filter: blur(12px); */
   border: 1px solid rgba(255, 255, 255, 0.3);
-  height: 200px;
-  width: 420px;
+  height: auto;
+  width: 320px;
+  padding:15px 20px 20px 20px;
+  z-index: 99;
+
+}
+
+.option-popup button{
+  margin: 0px ;
 }

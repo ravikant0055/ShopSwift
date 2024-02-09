@@ -1,0 +1,10 @@
+.stickFooter_elements::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adjust the shadow values as needed */
+    z-index: -1;
+  }
