@@ -18,9 +18,9 @@ function App() {
       {/* <Header />
       <Collection />
   <Categories/>*/}
-      <Trending /> 
-      <Footer /> 
-      {/* <ProductDetail /> */}
+      {/* <Trending />  */}
+      {/* <Footer />  */}
+      <ProductDetail />
 
     </div>
    </Router> 

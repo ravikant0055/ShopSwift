@@ -6,12 +6,12 @@
 }
 
 .product-imgDiv{
-    flex: 0.5;
+    flex: 0.6;
     border: 1px solid red;
 }
 
 .product-detailDiv{
-    flex: 0.5;
+    flex: 0.4;
     border: 1px solid green;
 }
 
