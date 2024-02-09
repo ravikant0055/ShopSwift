@@ -120,7 +120,7 @@ function CardForm({ product_id, full = true   }) {
             </div>
             <div>
               <button
-                className={`border w-full text-sm border border-gray-300 font-semibold py-[13px] text-center mr-4 rounded-md mb-7 border-2 hover:border-black ${!selectedSize && '!text-gray-400'} ${!full && 'bg-black text-white'}`}
+                className={`border w-full text-sm border border-gray-300 font-semibold py-[13px] text-center mr-4 rounded-md mb-5 border-2 hover:border-black ${!selectedSize && '!text-gray-400'} ${!full && 'bg-black text-white'}`}
                 type="submit"
                 disabled={!selectedSize}
               >
