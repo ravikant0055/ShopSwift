@@ -1,5 +1,4 @@
 import './App.css';
-import ProductDetail from './components/common/productDetails/ProductDetail';
 import Home from './pages/Home';
 import Men from './pages/Men';
 import Female from './pages/Women';
