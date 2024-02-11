@@ -1,5 +1,4 @@
 import './App.css';
-import ProductDetail from './components/common/productDetails/ProductDetail';
 import Home from './pages/Home';
 import Men from './pages/Men';
 import Female from './pages/Women';
@@ -25,7 +24,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/demo' element={<Demo/>}/>
         <Route path='/productitems' element={<ProductItems/>}/>
-        <Route path='/productdetails' element={<ProductDetails/>}/>
+        <Route path='/productDetails' element ={<ProductDetails/>} />
       </Routes>
     </div>
    </Router> 

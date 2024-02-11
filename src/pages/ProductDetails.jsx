@@ -41,7 +41,7 @@ function ProductDetails({ images, type }) {
           <ProductDetail />
         </div>
 
-        <div className="productDetails_productSummary lg:w-1/3">
+        <div className="productDetails_productSummary lg:w-1/3 mt-[150px] md:mt-0">
           <div className="">
             <span className="text-[13px] font-[600] text-gray-500 md:text-[15px]">
               MEN &{" "}

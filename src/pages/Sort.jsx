@@ -19,7 +19,7 @@ const Sort = ({item}) => {
        </div>
 
        {/* side filter */}
-       <div className={` bg-red-800 w-full h-full z-50 ${showFilter?'block':'hidden'}`}>
+       <div className={` bg-red-800 w-full h-full  z-50 ${showFilter?'block':'hidden'}`}>
              <FilterSection/>
        </div>
 
