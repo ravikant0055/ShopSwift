@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from "../../../assets/logo.png";
+import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { GoPerson } from "react-icons/go";
 import { FiSearch } from "react-icons/fi";
@@ -12,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-200 p-4 h-[90px] flex justify-between">
+    <nav className="bg-white flex flex-row items-center justify-between p-[15px] h-[10vh] shadow-lg shadow-gray-300/90">
 
     
       {/* menu icon */}  
@@ -23,33 +24,35 @@ const Navbar = () => {
             </svg>
           </button> 
       </div>
+
+      {/* logo code */}
+      <div className="flex items-center">
+        <Link to="/" >
+          <img className='w-[100px] md:w-[140px] p-2' src={logo} alt='logo' />
+        </Link>
+      </div>
       
       {/* nav links */}
-      <div className={` absolute md:relative left-0 top-20 md:top-0 w-[50%] p-4 md:w-0 h-[100%] bg-gray-200  md:flex flex-col md:flex-row md:items-center md:px-5 ${isOpen ? 'flex' : 'hidden'}`} onClick={()=>setIsOpen(false)}>
-          <Link to="/men" className="text-black mx-2 my-1 md:my-0 md:px-0 py-2 text-xl font-medium hover:text-gray-600">
-            Men
+      <div className={isOpen?'nav-linkdiv-mobile':'nav-linkdiv'} onClick={()=>setIsOpen(false)}>
+          <Link to="/men" className="text-black before:w-[11%] hover:text-gray-600">
+            MEN
           </Link>
-          <Link to="/women" className="text-black mx-2 my-1 md:my-0 md:px-2 py-2 text-xl font-medium hover:text-gray-600">
-            Women
+          <Link to="/women" className="text-black before:w-[20%]  hover:text-gray-600">
+            WOMEN
           </Link>
-          <Link to="/kids" className="text-black mx-2 my-1 md:my-0 md:px-2 py-2 text-xl font-medium hover:text-gray-600">
-            Kids
+          <Link to="/kids" className="text-black before:w-[12%] hover:text-gray-600">
+            KIDS
           </Link>
-      </div>
-    
-    
+          <Link to="/kids" className="text-black before:w-[34%] hover:text-gray-600">
+            ACCESSORIES
+          </Link>
 
-      
-    {/* logo code */}
-      <div className="flex items-center w-[100px] md:w-[140px]">
-        <Link to="/" >
-          <img  src={logo} alt='logo' />
-        </Link>
       </div>
 
     {/*side icon: profile, cart and search */}
+
       <div className="flex gap-5 md:gap-7 mr-3 items-center">
-           <FiSearch className='text-xl md:text-2xl'/>
+           <Link to='/'><FiSearch className='text-xl md:text-2xl'/></Link>
            <Link to='/cart'><RiShoppingCartLine className='text-xl md:text-2xl'/>
             <span className="bg-red-500 text-white rounded-full px-2 py-1 text-xs absolute -mt-9 ml-3">
              0
