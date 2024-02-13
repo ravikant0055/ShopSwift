@@ -6,7 +6,7 @@ const initialState = {
 }
 
 export const FilterSlice = createSlice({
-    name : 'products',
+    name : 'filter',
     initialState,
     reducers : {
         loadFilterProduct : (state,action) => {

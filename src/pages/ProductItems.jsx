@@ -38,6 +38,13 @@ const ProductItems = () => {
             <div className='mt-7'>
                <Product item={item}/> 
                
+
+
+
+
+
+
+               
                {/* pagination */}
                <div className='flex items-center p-3 gap-4 '>
                     <div className='border-2'>

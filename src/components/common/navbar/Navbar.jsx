@@ -7,13 +7,25 @@ import { FiSearch } from "react-icons/fi";
 import { RiShoppingCartLine } from "react-icons/ri";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [Navbar, setNavbar] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const changeNavbar = () =>{
+     if(window.scrollY >= 80) {
+       setNavbar(true);
+     }
+     else {
+      setNavbar(false);
+     }
+  };
+
+  window.addEventListener('scroll',changeNavbar);
+
   return (
-    <nav className="bg-white sticky top-0 z-50 flex flex-row items-center justify-between p-[15px] h-[10vh] shadow-md shadow-gray-500/50">
+    <nav className={`${Navbar ? 'navbar active' : 'navbar'} bg-white sticky top-0 z-50 flex flex-row items-center justify-between p-[15px] h-[10vh]`}>
 
     
       {/* menu icon */}  

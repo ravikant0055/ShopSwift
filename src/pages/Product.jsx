@@ -1,14 +1,19 @@
 import React from "react";
 import TrendCard from "../components/common/trending/TrendCard";
 import "../components/common/trending/Trending.css";
-import { useDispatch, useSelector } from "react-redux";
-import Data from "./Data";
+// import { useDispatch, useSelector } from "react-redux";
+// import Data from "./Data";
+// import { setProductDetails } from "../redux/slice/ProductDetailsSlice";
 
 const Product = ({ item }) => {
   
-  const {all_products} = useSelector((state)=> state.products);
-  const dispatch = useDispatch();
+  // const {products} = useSelector((state)=> state.products);
+  // const dispatch = useDispatch(Data);
 
+  // useEffect(()=>{
+  //   console.log('in product page')
+  //   dispatch(setProductDetails(Data));
+  // }, [])
 
   return (
     <>

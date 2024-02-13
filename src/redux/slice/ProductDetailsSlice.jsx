@@ -9,6 +9,29 @@ const initialState = {
   fabric: [],
   care_instructions: []
   }
+
+
+
+  // isError: false,
+  // products: {}
+  // product_id:'',
+  // product_name:'',
+  // product_gender:'',
+  // product_price:'',
+  // product_img:'',
+  // product_color:'',
+  // product_date:'',
+  // product_quantity:'',
+
+  // product_details:[{
+  //   details:[],
+  //   descriptions:'',
+  //   fabric:'',
+  //   care_instructions:''
+  // }],
+  // product_size:[]
+
+  // }
   
 }
 
