@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from "../../../assets/logo.png";
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { GoPerson } from "react-icons/go";
 import { FiSearch } from "react-icons/fi";
 import { RiShoppingCartLine } from "react-icons/ri";
@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white flex flex-row items-center justify-between p-[15px] h-[10vh] shadow-lg shadow-gray-300/90">
+    <nav className="bg-white sticky top-0 z-50 flex flex-row items-center justify-between p-[15px] h-[10vh] shadow-md shadow-gray-500/50">
 
     
       {/* menu icon */}  
@@ -34,18 +34,18 @@ const Navbar = () => {
       
       {/* nav links */}
       <div className={isOpen?'nav-linkdiv-mobile':'nav-linkdiv'} onClick={()=>setIsOpen(false)}>
-          <Link to="/men" className="text-black before:w-[11%] hover:text-gray-600">
+          <NavLink to="/men" activeStyle={{color:"red"}} className="text-black before:w-[11%] hover:text-gray-600">
             MEN
-          </Link>
-          <Link to="/women" className="text-black before:w-[20%]  hover:text-gray-600">
+          </NavLink>
+          <NavLink to="/women" activeStyle={{color:"red"}} className="text-black before:w-[20%]  hover:text-gray-600">
             WOMEN
-          </Link>
-          <Link to="/kids" className="text-black before:w-[12%] hover:text-gray-600">
+          </NavLink>
+          <NavLink to="/kids" activeStyle={{color:"red"}} className="text-black before:w-[12%] hover:text-gray-600">
             KIDS
-          </Link>
-          <Link to="/kids" className="text-black before:w-[34%] hover:text-gray-600">
+          </NavLink>
+          <NavLink to="/accessories" activeStyle={{color:"red"}} className="text-black before:w-[34%] hover:text-gray-600">
             ACCESSORIES
-          </Link>
+          </NavLink>
 
       </div>
 

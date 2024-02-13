@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import ProductItems from './pages/ProductItems';
 import ProductDetails from './pages/ProductDetails';
+import Accessories from './pages/Accessories';
 function App() {
   return (
    <Router>
@@ -20,6 +21,7 @@ function App() {
         <Route path='/men' element={<Men/>} />
         <Route path='/women' element={<Female/>}/>
         <Route path='/kids' element={<Kids/>}/>
+        <Route path='/accessories' element={<Accessories/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/demo' element={<Demo/>}/>
