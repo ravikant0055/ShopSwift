@@ -24,7 +24,7 @@ function Header() {
        <div className='color_css'>
         <Slider {...settings}>
           <div>
-          <img  className='header_image_' src='https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt="shpping_image1" />
+          <img  className='header_image_' src='https://images.unsplash.com/photo-1707672980546-3be1f182050f?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt="shpping_image1" />
           </div>
 
           <div>

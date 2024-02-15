@@ -15,7 +15,7 @@ import { SiPaytm } from "react-icons/si";
 
 function Footer() {
   return (
-    <div className='w-full h-full md:h-[500px] bg-black '>
+    <div className='w-full h-full md:h-[500px] bg-[#0d0e1e] '>
         
         {/* upper div */}
         <div className='md:flex p-7 justify-between'>
