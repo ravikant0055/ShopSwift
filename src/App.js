@@ -19,22 +19,15 @@ function App() {
   return (
    <Router>
     <div className="App">
-    <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/men' element={<Men/>} />
-        <Route path='/women' element={<Female/>}/>
-        <Route path='/kids' element={<Kids/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='/demo' element={<Demo/>}/>
-        <Route path='/productitems' element={<ProductItems/>}/>
-<<<<<<< HEAD
-        <Route path='/productDetail' element ={<ProductDetail />} />
-=======
-        <Route path='/productdetails' element={<ProductDetails/>}/>
->>>>>>> 6cf7c67a28cf51bd8c08b0a0740caab7cdcf880e
-      </Routes>
+      
+      <Navbar /> 
+      {/* <Header />
+      <Collection />
+  <Categories/>*/}
+      {/* <Trending />  */}
+      {/* <Footer />  */}
+      <ProductDetail />
+
     </div>
    </Router> 
 

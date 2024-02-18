@@ -1,12 +1,14 @@
 
 
 /* .product-imgDiv{
-    flex: 0.5;
+    flex: 0.6;
     border: 1px solid red;
-    
-} */
+}
 
-
+.product-detailDiv{
+    flex: 0.5;
+    border: 1px solid green;
+}
 
 .top-image {
     margin-bottom: 10px; 
