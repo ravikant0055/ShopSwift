@@ -15,7 +15,7 @@ import { SiPaytm } from "react-icons/si";
 
 function Footer() {
   return (
-    <div className='w-full h-full md:h-[500px] bg-black '>
+    <div className='w-full h-full md:h-[500px] bg-[#0d0e1e] '>
         
         {/* upper div */}
         <div className='md:flex p-7 justify-between'>
@@ -23,9 +23,9 @@ function Footer() {
           {/* logo / social link */}
           <div className='flex md:flex-col items-center md:items-start md:gap-0 gap-9'>
           
-           <div className="w-[160px]">
+           <div>
             <Link to="/" >
-             <img  src={logo} alt='logo' />
+             <img className='w-[160px]' src={logo} alt='logo' />
             </Link>
            </div>
 

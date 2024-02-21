@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Trending.css"
+import PopupForm from '../PopupForm';
 
 const TrendCard = ({ imageSrc, title, subtitle, price, discount ,priceDis}) => {
   const [isPopupVisible, setPopupVisibility] = useState(false);
@@ -18,6 +19,9 @@ const TrendCard = ({ imageSrc, title, subtitle, price, discount ,priceDis}) => {
     setDivVisibility(!isDivVisible);
   };
 
+  // isDivVisible ? document.body.style.overflowY = 'hidden' : (document.body.style.overflow = 'auto') ;
+  // isDivVisible ? document.body.classList.add('active-model'):  document.body.classList.remove('active-model')
+
   return (
     <div className="trend-img" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <img className={`trend_img_main ${isPopupVisible ? 'hovered' : ''}`} src={process.env.PUBLIC_URL + imageSrc} alt={title} />
@@ -27,17 +31,17 @@ const TrendCard = ({ imageSrc, title, subtitle, price, discount ,priceDis}) => {
         <del><h3 className={isPopupVisible ? 'hovered' : ''}>{price}</h3></del>
         <h3 className={`${isPopupVisible ? 'hovered' : ''} font-bold text-red-600` }>{priceDis}</h3>
       </div>
+      
       <h2 className={isPopupVisible ? 'hovered' : ''}>{discount}</h2>
-      {isPopupVisible && (
-        <>
+      
+        
           {isDivVisible &&
-            <div className="option-popup">
-                 This is a small div
-            </div>
+            <PopupForm hideDiv={setDivVisibility}  />
           }
-          <button onClick={handleButtonClick}>Select Options</button>
-        </>
-      )}
+        
+      
+      {(isPopupVisible || isDivVisible) && <button className='' onClick={handleButtonClick}>Select Options</button>}
+
     </div>
   );
 };
