@@ -1,0 +1,75 @@
+.navbar.active {
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+    --tw-shadow-color: rgb(107 114 128 / 0.5);
+    --tw-shadow: var(--tw-shadow-colored);
+}
+
+.nav-linkdiv{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
+.nav-linkdiv a{
+  letter-spacing: 0.2em;
+}
+
+.nav-linkdiv a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    /* width: 100%;` */
+    height: 2px;
+    background: linear-gradient(to right, #e35a01 , #cc005f);
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+.nav-linkdiv a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-linkdiv a:hover{
+    background: -webkit-linear-gradient(#e35a01 , #cc005f);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.nav-linkdiv a.active {
+    background: -webkit-linear-gradient(#e35a01 , #cc005f);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-weight: bold;
+}
+
+@media (max-width:768px) {
+    .nav-linkdiv{
+        display: none;
+    }
+    .nav-linkdiv-mobile {
+        position: absolute;
+        display: flex;  
+        flex-direction: column;
+        box-shadow: rgba(50,50,93,0.23) 0 30px 30px -20px;
+        left: 0;
+        right: 0;
+        top: 100%;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+        height: 70vh;
+        background-color: rgb(232, 232, 232);
+        z-index: 1;
+    }
+    .nav-linkdiv-mobile a{
+        padding: 12px 20px 12px 20px;
+        transition: all 0.5s ease-in-out;
+        text-align: left;
+        width: 0;
+    }
+}

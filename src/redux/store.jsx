@@ -6,6 +6,8 @@ export const store = configureStore({
   reducer: {
     auth: authReducer,
     productDetails: productDetailsReducer,
+
+    
     products : FilterSlice
   },
 })
