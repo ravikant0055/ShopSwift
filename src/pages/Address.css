@@ -1,0 +1,132 @@
+
+.addressTitle{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.mainClass{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  overflow: hidden;
+  line-height: 50px;
+}
+
+.formAddress{
+    width: 40%;
+    margin-bottom:60px ;
+    padding: 20px; 
+    
+}
+
+.addName{
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+.firtName,
+.lastname {
+  width: 50%; 
+}
+
+.mob-pin{
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+.mobno,
+.pincode{
+    width: 50%;
+}
+
+.town-city{
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+.town,
+.city{
+    width: 50%;
+}
+
+
+
+.checkboxLabel {
+    display: flex;
+    margin-top: -10px;
+    align-items: center;
+    gap: 5px;
+    justify-content: start;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px; /* Adjust the margin as needed */
+  }
+  
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 2;
+    color: #000000;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box; 
+}
+
+
+.error{
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+
+
+.addressButton{
+    margin-top: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 300;
+    width: 50%;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .formAddress {
+      width: 90%;
+    }
+  
+    .addressButton {
+      width: 100%; 
+      margin-top: 10px;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 768px) {
+    .formAddress {
+      width: 80%;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .formAddress {
+      max-width: 70%;
+    }
+  }
