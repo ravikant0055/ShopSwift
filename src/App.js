@@ -13,12 +13,12 @@ import ProductDetails from './pages/ProductDetails';
 <<<<<<< HEAD
 =======
 import Accessories from './pages/Accessories';
->>>>>>> 7d9c9840f1f364ceed540818a1931f3b0709644c
+import Address from './pages/Address';
 function App() {
   return (
    <Router>
     <div className="App">
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
       
       <Navbar /> 
       {/* <Header />
@@ -28,9 +28,9 @@ function App() {
       {/* <Footer />  */}
       <ProductDetail />
 
-=======
+=========
     <Navbar/>
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/men' element={<Men/>} />
         <Route path='/women' element={<Female/>}/>
@@ -42,7 +42,7 @@ function App() {
         <Route path='/productitems' element={<ProductItems/>}/>
         <Route path='/productdetails' element={<ProductDetails/>}/>
       </Routes>
->>>>>>> 7d9c9840f1f364ceed540818a1931f3b0709644c
+>>>>>>>>> Temporary merge branch 2
     </div>
    </Router> 
 

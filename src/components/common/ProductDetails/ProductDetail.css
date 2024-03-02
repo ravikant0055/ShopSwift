@@ -70,3 +70,78 @@ a img {
 
 
  
+.product-slidingImg {
+    /* height: 600px; */
+    margin: 0 auto;
+    width: 470px;
+}
+
+/* .product-smallImgDiv {
+    background-color: yellow;
+} */
+
+.slick-thumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slick-thumb li {
+    width: 75px;
+    /* height: 0px; */
+    top:40px;
+    /* margin: 0 9px; */
+}
+
+.product-imgDiv{
+    flex: 0.6;
+    border: 1px solid red;
+.slick-thumb li.slick-active{
+    background-color: red;
+    opacity: 70%;
+}
+}
+
+.product-detailDiv{
+    flex: 0.5;
+    border: 1px solid green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-image {
+    margin-bottom: 10px; 
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+
+  }
+
+
+  
+  /* @media(max-width:768px){
+    .product-mainContainer{
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        margin : 20px 120px;
+    }
+  } */
+
+
+ 
